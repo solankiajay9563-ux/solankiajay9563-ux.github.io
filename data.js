@@ -83,7 +83,7 @@ window.skillData = {
           desc: 'Named temporary result sets defined with WITH. Make complex queries readable and reusable. Replace nested subqueries. Foundational for all advanced SQL work.',
           subtopics: ['WITH clause syntax', 'Multiple chained CTEs', 'Replacing subqueries', 'Recursive CTEs (basic)'],
           projects: [
-            { text: '<strong>Rolling 7-day call volume</strong> — Use your Petpooja call log data. Write a CTE that calculates daily call counts, then query it to get 7-day rolling sums per agent. Directly applicable to your existing work.' },
+            { text: '<strong>Rolling 7-day call volume</strong> — Use your Petpooja call log data. Write a CTE that calculates daily call counts, then query it to get 7-day rolling sums per agen[...]
             { text: '<strong>E-commerce funnel analysis</strong> — Olist dataset. CTE layer 1: sessions per user. CTE layer 2: purchases per user. Final: conversion rate per category.' },
             { text: '<strong>Customer cohort retention</strong> — Find users who signed up in month X and came back in month X+1, X+2. Classic interview problem, forces multi-CTE thinking.' }
           ],
@@ -92,17 +92,17 @@ window.skillData = {
             { free: true, category: 'practice', label: 'LeetCode — Database Medium problems', url: 'https://leetcode.com/tag/database/' },
             { free: true, category: 'article', label: 'PostgreSQL Tutorial — CTEs', url: 'https://www.postgresqltutorial.com/postgresql-cte/' }
           ],
-          validate: 'Solve LeetCode #185 (Department Top Three Salaries) and #262 (Trips and Users) using CTEs without looking at solutions. If you can write them cleanly in one attempt, you own CTEs.'
+          validate: 'Solve LeetCode #185 (Department Top Three Salaries) and #262 (Trips and Users) using CTEs without looking at solutions. If you can write them cleanly in one attempt, you own C[...]
         },
         {
           id: 'sql-window',
           title: 'Window Functions',
           level: 'advanced',
-          desc: 'Perform calculations across rows related to the current row — without collapsing them like GROUP BY does. The single biggest jump from intermediate to advanced SQL. Tested in almost every senior interview.',
+          desc: 'Perform calculations across rows related to the current row — without collapsing them like GROUP BY does. The single biggest jump from intermediate to advanced SQL. Tested in a[...]
           subtopics: ['ROW_NUMBER / RANK / DENSE_RANK', 'LAG and LEAD', 'SUM/AVG/COUNT OVER', 'PARTITION BY vs ORDER BY', 'ROWS BETWEEN (frames)'],
           projects: [
-            { text: '<strong>Agent performance ranking by week</strong> — Rank agents by calls/conversions within each week. Use RANK() OVER (PARTITION BY week ORDER BY conversions DESC). Show how rankings shift week over week using LAG().' },
-            { text: '<strong>Running revenue total — e-commerce</strong> — Olist dataset. SUM(revenue) OVER (PARTITION BY seller ORDER BY order_date ROWS UNBOUNDED PRECEDING). A standard BI report query.' },
+            { text: '<strong>Agent performance ranking by week</strong> — Rank agents by calls/conversions within each week. Use RANK() OVER (PARTITION BY week ORDER BY conversions DESC). Show [...]
+            { text: '<strong>Running revenue total — e-commerce</strong> — Olist dataset. SUM(revenue) OVER (PARTITION BY seller ORDER BY order_date ROWS UNBOUNDED PRECEDING). A standard BI r[...]
             { text: '<strong>Month-over-month growth calculator</strong> — Any sales dataset. Use LAG(revenue, 1) to calculate MoM change % per product. Highly interview-relevant.' }
           ],
           sources: [
@@ -110,17 +110,17 @@ window.skillData = {
             { free: true, category: 'article', label: 'Mode Analytics — Window Functions', url: 'https://mode.com/sql-tutorial/sql-window-functions/' },
             { free: true, category: 'practice', label: 'LeetCode Top SQL 50', url: 'https://leetcode.com/studyplan/top-sql-50/' }
           ],
-          validate: 'Solve LeetCode #184 (Department Highest Salary), #178 (Rank Scores), and #180 (Consecutive Numbers) — all three using window functions. If you solve them unaided, you are interview-ready on window functions.'
+          validate: 'Solve LeetCode #184 (Department Highest Salary), #178 (Rank Scores), and #180 (Consecutive Numbers) — all three using window functions. If you solve them unaided, you are i[...]
         },
         {
           id: 'sql-joins',
           title: 'Advanced JOINs & Self JOINs',
           level: 'intermediate',
-          desc: 'You likely know INNER/LEFT JOIN. The gaps are SELF JOIN (a table joined to itself), non-equi joins, and understanding when to use each. Commonly tested with org-chart or comparison problems.',
+          desc: 'You likely know INNER/LEFT JOIN. The gaps are SELF JOIN (a table joined to itself), non-equi joins, and understanding when to use each. Commonly tested with org-chart or comparis[...]
           subtopics: ['SELF JOIN', 'Non-equi JOIN', 'CROSS JOIN use cases', 'Multiple table JOINs', 'JOIN vs subquery performance intuition'],
           projects: [
-            { text: '<strong>Manager salary comparison</strong> — Classic: employees table joined to itself. Find employees who earn more than their manager. Teaches self-join pattern completely.' },
-            { text: '<strong>Product pair analysis</strong> — Find all pairs of products bought together in the same order (CROSS JOIN or self-join on order_items). Common in e-commerce analytics.' }
+            { text: '<strong>Manager salary comparison</strong> — Classic: employees table joined to itself. Find employees who earn more than their manager. Teaches self-join pattern completel[...]
+            { text: '<strong>Product pair analysis</strong> — Find all pairs of products bought together in the same order (CROSS JOIN or self-join on order_items). Common in e-commerce analyti[...]
           ],
           sources: [
             { free: true, category: 'practice', label: 'StrataScratch — real interview questions', url: 'https://www.stratascratch.com' },
@@ -132,23 +132,23 @@ window.skillData = {
           id: 'sql-aggregation',
           title: 'Aggregations & Grouping Patterns',
           level: 'intermediate',
-          desc: 'You know basic GROUP BY. The advanced layer is conditional aggregation (CASE inside SUM), HAVING filters, ROLLUP/CUBE, and multi-level aggregation patterns common in business reporting.',
+          desc: 'You know basic GROUP BY. The advanced layer is conditional aggregation (CASE inside SUM), HAVING filters, ROLLUP/CUBE, and multi-level aggregation patterns common in business rep[...]
           subtopics: ['Conditional aggregation (SUM CASE WHEN)', 'HAVING vs WHERE', 'ROLLUP / CUBE (bonus)', 'Aggregating after window functions', 'Pivot using aggregation'],
           projects: [
-            { text: "<strong>Call outcome pivot table</strong> — Using your Petpooja data conceptually: count calls per agent split by outcome (answered/missed/transferred) as columns, using SUM(CASE WHEN outcome='X' THEN 1 ELSE 0 END)." },
+            { text: "<strong>Call outcome pivot table</strong> — Using your Petpooja data conceptually: count calls per agent split by outcome (answered/missed/transferred) as columns, using SU[...]
             { text: '<strong>Monthly sales report with subtotals</strong> — Use ROLLUP to get per-category totals AND a grand total in one query. Show this as an "executive summary SQL".' }
           ],
           sources: [
             { free: true, category: 'article', label: 'Mode Analytics — Aggregations', url: 'https://mode.com/sql-tutorial/sql-aggregate-functions/' },
             { free: true, category: 'practice', label: 'HackerRank — Advanced Aggregation', url: 'https://www.hackerrank.com/domains/sql' }
           ],
-          validate: 'Write one query that produces a pivot-style report (outcomes as columns) from any dataset using only CASE WHEN inside SUM. If it runs correctly first try, this topic is closed.'
+          validate: 'Write one query that produces a pivot-style report (outcomes as columns) from any dataset using only CASE WHEN inside SUM. If it runs correctly first try, this topic is close[...]
         },
         {
           id: 'sql-subqueries',
           title: 'Subqueries & Correlated Subqueries',
           level: 'intermediate',
-          desc: 'Subqueries inside SELECT, FROM, WHERE, and HAVING. Correlated subqueries reference the outer query — slow but heavily tested in interviews. Understanding when to replace them with CTEs or JOINs is a senior signal.',
+          desc: 'Subqueries inside SELECT, FROM, WHERE, and HAVING. Correlated subqueries reference the outer query — slow but heavily tested in interviews. Understanding when to replace them w[...]
           subtopics: ['Scalar subquery in SELECT', 'Correlated subquery in WHERE', 'Exists vs IN vs JOIN', 'Subquery vs CTE decision'],
           projects: [
             { text: '<strong>Find agents above average performance</strong> — Subquery calculates average, outer query filters. Then rewrite the same thing as a CTE and compare.' }
@@ -187,8 +187,8 @@ window.skillData = {
           id: 'py-core',
           title: 'pandas Core — Loading, Cleaning, Shaping',
           level: 'foundation',
-          desc: "The absolute bedrock. 80% of analyst Python work is here. You already use pandas in your pipeline — the goal is going deeper: methodically handling any messy dataset you're handed.",
-          subtopics: ['read_csv / read_excel with options', 'Handling nulls (fillna, dropna, isna)', 'dtype conversion', 'rename / drop / reindex', 'String cleaning (str.strip, str.lower, str.replace)', 'Duplicate detection & removal'],
+          desc: "The absolute bedrock. 80% of analyst Python work is here. You already use pandas in your pipeline — the goal is going deeper: methodically handling any messy dataset you're han[...]
+          subtopics: ['read_csv / read_excel with options', 'Handling nulls (fillna, dropna, isna)', 'dtype conversion', 'rename / drop / reindex', 'String cleaning (str.strip, str.lower, str.rep[...]
           projects: [
             { text: '<strong>Dirty data cleaning challenge</strong> — Download any messy Kaggle dataset. Document every cleaning step in a Jupyter notebook with before/after value counts.' },
             { text: "<strong>Reframe your Petpooja script</strong> — Extract just the cleaning portion of your pipeline into a standalone notebook. Add markdown cells explaining each step." }
@@ -205,7 +205,7 @@ window.skillData = {
           title: 'groupby, agg, pivot_table',
           level: 'intermediate',
           desc: "The pandas equivalent of SQL's GROUP BY. groupby().agg() lets you apply multiple functions simultaneously. pivot_table reshapes data into summary tables.",
-          subtopics: ['groupby single and multiple columns', 'agg with dict (multiple functions)', 'Named aggregations', 'pivot_table with values/index/columns/aggfunc', 'value_counts and crosstab'],
+          subtopics: ['groupby single and multiple columns', 'agg with dict (multiple functions)', 'Named aggregations', 'pivot_table with values/index/columns/aggfunc', 'value_counts and crossta[...]
           projects: [
             { text: "<strong>Agent performance summary table</strong> — From call log CSV: groupby agent → agg(calls='count', avg_duration='mean'). Output a ranked summary table." },
             { text: "<strong>Sales pivot by category & region</strong> — Olist dataset. pivot_table(values='revenue', index='product_category', columns='state', aggfunc='sum')." }
@@ -221,9 +221,9 @@ window.skillData = {
           title: 'merge, join, concat',
           level: 'intermediate',
           desc: 'pandas equivalent of SQL JOINs. Analysts constantly combine datasets — orders with customers, calls with agents, products with categories.',
-          subtopics: ['pd.merge — how, on, left_on/right_on', 'merge vs join vs concat', 'Handling duplicate column names after merge', 'Detecting bad merges (many-to-many)', 'pd.concat along axis 0 and 1'],
+          subtopics: ['pd.merge — how, on, left_on/right_on', 'merge vs join vs concat', 'Handling duplicate column names after merge', 'Detecting bad merges (many-to-many)', 'pd.concat along a[...]
           projects: [
-            { text: '<strong>Enrich call logs with agent metadata</strong> — Merge a call log DataFrame with an agent info DataFrame on agent_id, then find calls where agent is missing (left join + isna check).' },
+            { text: '<strong>Enrich call logs with agent metadata</strong> — Merge a call log DataFrame with an agent info DataFrame on agent_id, then find calls where agent is missing (left jo[...]
             { text: '<strong>Combine multiple monthly CSV files</strong> — Read 12 monthly CSVs in a loop, pd.concat them into one DataFrame, then analyse the full year.' }
           ],
           sources: [
@@ -236,8 +236,8 @@ window.skillData = {
           id: 'py-apply',
           title: 'apply, map, lambda, vectorisation',
           level: 'intermediate',
-          desc: 'Transforming column values. apply() runs a function row-by-row or column-by-column. map() replaces values. Vectorised operations (avoid loops) are the professional way — interviewers notice this.',
-          subtopics: ['Series.apply() vs DataFrame.apply()', 'map() for value replacement', 'lambda functions in apply', 'np.where for conditional columns', 'Avoiding for loops — vectorised operations'],
+          desc: 'Transforming column values. apply() runs a function row-by-row or column-by-column. map() replaces values. Vectorised operations (avoid loops) are the professional way — interv[...]
+          subtopics: ['Series.apply() vs DataFrame.apply()', 'map() for value replacement', 'lambda functions in apply', 'np.where for conditional columns', 'Avoiding for loops — vectorised ope[...]
           projects: [
             { text: '<strong>Agent name normalisation</strong> — Refactor a cleaning loop into a clean apply/map pattern instead. Show before and after in a notebook.' },
             { text: '<strong>Derived feature engineering</strong> — Create 3 new columns using apply/lambda: a bucketed age group, a revenue tier, and a weekend flag.' }
@@ -253,7 +253,7 @@ window.skillData = {
           title: 'Data Visualisation — matplotlib & seaborn',
           level: 'intermediate',
           desc: "Analysis means nothing if you can't show it. matplotlib for control, seaborn for quick statistical plots. Every portfolio project needs at least 3–4 well-formatted charts.",
-          subtopics: ['Line, bar, scatter, histogram, boxplot', 'Subplots (multiple charts in one figure)', 'Titles, axis labels, legends (non-negotiable)', 'Seaborn heatmap for correlation', 'Colour palette and style choices', 'Saving to PNG/PDF for reports'],
+          subtopics: ['Line, bar, scatter, histogram, boxplot', 'Subplots (multiple charts in one figure)', 'Titles, axis labels, legends (non-negotiable)', 'Seaborn heatmap for correlation', 'Co[...]
           projects: [
             { text: '<strong>EV market trend charts</strong> — VAHAN data. Monthly registrations line chart, state-wise bar chart, brand market share bar. 4 charts, all labelled.' },
             { text: '<strong>Call centre daily report visual</strong> — Plot call volume by hour, agent performance comparison, and call outcome distribution.' }
@@ -269,10 +269,10 @@ window.skillData = {
           id: 'py-eda',
           title: 'Exploratory Data Analysis (EDA) — Full Workflow',
           level: 'advanced',
-          desc: 'EDA is what analysts actually do with data. Shape → nulls → distributions → correlations → outliers → hypothesis → insight. Interviewers ask "walk me through your EDA process" to separate real analysts from tutorial completers.',
-          subtopics: ['df.info(), .describe(), .shape', 'Null heatmaps', 'Correlation matrix + heatmap', 'Outlier detection (IQR, z-score)', 'Distribution plots per feature', 'Forming and testing hypotheses from the data'],
+          desc: 'EDA is what analysts actually do with data. Shape → nulls → distributions → correlations → outliers → hypothesis → insight. Interviewers ask "walk me through your EDA[...]
+          subtopics: ['df.info(), .describe(), .shape', 'Null heatmaps', 'Correlation matrix + heatmap', 'Outlier detection (IQR, z-score)', 'Distribution plots per feature', 'Forming and testing[...]
           projects: [
-            { text: '<strong>Full EDA on IBM HR Attrition dataset</strong> — Go through every feature, find 5 interesting patterns, write a conclusion section. Publish on Kaggle as a notebook.' },
+            { text: '<strong>Full EDA on IBM HR Attrition dataset</strong> — Go through every feature, find 5 interesting patterns, write a conclusion section. Publish on Kaggle as a notebook.'[...]
             { text: '<strong>IPL match EDA</strong> — Cricsheet.org data. Does toss matter? Best death-over bowlers? Home advantage trends?' }
           ],
           sources: [
@@ -285,10 +285,10 @@ window.skillData = {
           id: 'py-notebooks',
           title: 'Jupyter Notebooks — Professional Presentation',
           level: 'foundation',
-          desc: 'Your code is your presentation layer in data roles. Messy notebooks with no markdown = junior signal. Clean notebooks with headers, insight callouts, and conclusions = analyst signal.',
-          subtopics: ['Markdown cells for context and conclusions', 'Hiding implementation cells (input hiding)', 'Notebook structure: question → data → analysis → insight', 'Exporting to HTML/PDF', 'Sharing via GitHub or nbviewer'],
+          desc: 'Your code is your presentation layer in data roles. Messy notebooks with no markdown = junior signal. Clean notebooks with headers, insight callouts, and conclusions = analyst si[...]
+          subtopics: ['Markdown cells for context and conclusions', 'Hiding implementation cells (input hiding)', 'Notebook structure: question → data → analysis → insight', 'Exporting to H[...]
           projects: [
-            { text: "<strong>Reformat one existing project as a proper notebook report</strong> — Problem statement, data overview, analysis with markdown narration, key findings, limitations." }
+            { text: "<strong>Reformat one existing project as a proper notebook report</strong> — Problem statement, data overview, analysis with markdown narration, key findings, limitations."[...]
           ],
           sources: [
             { free: true, category: 'video', label: 'Corey Schafer — Jupyter Notebook tips', url: 'https://www.youtube.com/watch?v=HW29067qVWk' },
@@ -297,30 +297,30 @@ window.skillData = {
           validate: 'Share a notebook link with someone non-technical and ask: "Can you understand what I found without me explaining it?" If yes — confirmed.'
         }
       ]
-    }
+    },
     {
-  id: "regex",
-  name: "Regex",
-  ext: ".Rgx",
-  color: "#9D174D",
-  topics: [
-    {
-      id: "regex-regex-module",
-      title: "Regex Module",
-      level: "intermediate",
-      desc: "Pattern Matching, String Matching",
-      subtopics: ["Literal Characters"],
-      projects: [
-        { text: "Pending To add here" }
-      ],
-      sources: [
-        { free: true, category: "practice", label: "Hackerrank", url: "https://www.hackerrank.com/domains/regex?filters%5Bstatus%5D%5B%5D=unsolved" },
-        { free: true, category: "practice", label: "Leetcode - Solve all Regex Problems", url: "https://leetcode.com/studyplan/top-sql-50/" }
-      ],
-      notes: { url: "https://www.remnote.com/w/6a49e95ee028ccd69b806a62/Regex-Gc8gjEQ0gdzsXwXPB", label: "Notes On Regex" },
-      validate: "Solve all problems on the given link"
+      id: "regex",
+      name: "Regex",
+      ext: ".Rgx",
+      color: "#9D174D",
+      topics: [
+        {
+          id: "regex-regex-module",
+          title: "Regex Module",
+          level: "intermediate",
+          desc: "Pattern Matching, String Matching",
+          subtopics: ["Literal Characters"],
+          projects: [
+            { text: "Pending To add here" }
+          ],
+          sources: [
+            { free: true, category: "practice", label: "Hackerrank", url: "https://www.hackerrank.com/domains/regex?filters%5Bstatus%5D%5B%5D=unsolved" },
+            { free: true, category: "practice", label: "Leetcode - Solve all Regex Problems", url: "https://leetcode.com/studyplan/top-sql-50/" }
+          ],
+          notes: { url: "https://www.remnote.com/w/6a49e95ee028ccd69b806a62/Regex-Gc8gjEQ0gdzsXwXPB", label: "Notes On Regex" },
+          validate: "Solve all problems on the given link"
+        }
+      ]
     }
-  ]
-}
   ]
 };
