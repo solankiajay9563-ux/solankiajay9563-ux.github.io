@@ -4,7 +4,7 @@
   your ledger. Everything else (index.html, app.js, style.css)
   just reads this object and renders it.
 
-  STRUCTURE-
+  STRUCTURE
   window.skillData = {
     tracks: [
       {
