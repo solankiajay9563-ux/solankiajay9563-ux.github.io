@@ -98,11 +98,11 @@ window.skillData = {
           id: 'sql-window',
           title: 'Window Functions',
           level: 'advanced',
-          desc: 'Perform calculations across rows related to the current row — without collapsing them like GROUP BY does. The single biggest jump from intermediate to advanced SQL. Tested in a[...]
+          desc: 'Perform calculations across rows related to the current row — without collapsing them like GROUP BY does. The single biggest jump from intermediate to advanced SQL. Tested in a[...]',
           subtopics: ['ROW_NUMBER / RANK / DENSE_RANK', 'LAG and LEAD', 'SUM/AVG/COUNT OVER', 'PARTITION BY vs ORDER BY', 'ROWS BETWEEN (frames)'],
           projects: [
-            { text: '<strong>Agent performance ranking by week</strong> — Rank agents by calls/conversions within each week. Use RANK() OVER (PARTITION BY week ORDER BY conversions DESC). Show [...]
-            { text: '<strong>Running revenue total — e-commerce</strong> — Olist dataset. SUM(revenue) OVER (PARTITION BY seller ORDER BY order_date ROWS UNBOUNDED PRECEDING). A standard BI r[...]
+            { text: '<strong>Agent performance ranking by week</strong> — Rank agents by calls/conversions within each week. Use RANK() OVER (PARTITION BY week ORDER BY conversions DESC). Show [...]'},
+            { text: '<strong>Running revenue total — e-commerce</strong> — Olist dataset. SUM(revenue) OVER (PARTITION BY seller ORDER BY order_date ROWS UNBOUNDED PRECEDING). A standard BI r[...]'},
             { text: '<strong>Month-over-month growth calculator</strong> — Any sales dataset. Use LAG(revenue, 1) to calculate MoM change % per product. Highly interview-relevant.' }
           ],
           sources: [
