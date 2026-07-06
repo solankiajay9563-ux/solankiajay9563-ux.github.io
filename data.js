@@ -135,7 +135,7 @@ window.skillData = {
           desc: 'You know basic GROUP BY. The advanced layer is conditional aggregation (CASE inside SUM), HAVING filters, ROLLUP/CUBE, and multi-level aggregation patterns common in business rep[...]',
           subtopics: ['Conditional aggregation (SUM CASE WHEN)', 'HAVING vs WHERE', 'ROLLUP / CUBE (bonus)', 'Aggregating after window functions', 'Pivot using aggregation'],
           projects: [
-            { text: "<strong>Call outcome pivot table</strong> — Using your Petpooja data conceptually: count calls per agent split by outcome (answered/missed/transferred) as columns, using SU[...]'},
+            { text: "<strong>Call outcome pivot table</strong> — Using your Petpooja data conceptually: count calls per agent split by outcome (answered/missed/transferred) as columns, using SU[...]"},
             { text: '<strong>Monthly sales report with subtotals</strong> — Use ROLLUP to get per-category totals AND a grand total in one query. Show this as an "executive summary SQL".' }
           ],
           sources: [
