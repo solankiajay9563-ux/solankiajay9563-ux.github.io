@@ -83,7 +83,7 @@ window.skillData = {
           desc: 'Named temporary result sets defined with WITH. Make complex queries readable and reusable. Replace nested subqueries. Foundational for all advanced SQL work.',
           subtopics: ['WITH clause syntax', 'Multiple chained CTEs', 'Replacing subqueries', 'Recursive CTEs (basic)'],
           projects: [
-            { text: '<strong>Rolling 7-day call volume</strong> — Use your Petpooja call log data. Write a CTE that calculates daily call counts, then query it to get 7-day rolling sums per agen[...]},
+            { text: '<strong>Rolling 7-day call volume</strong> — Use your Petpooja call log data. Write a CTE that calculates daily call counts, then query it to get 7-day rolling sums per agent},
             { text: '<strong>E-commerce funnel analysis</strong> — Olist dataset. CTE layer 1: sessions per user. CTE layer 2: purchases per user. Final: conversion rate per category.' },
             { text: '<strong>Customer cohort retention</strong> — Find users who signed up in month X and came back in month X+1, X+2. Classic interview problem, forces multi-CTE thinking.' }
           ],
