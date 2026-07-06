@@ -171,7 +171,7 @@ footer{text-align:center;font-size:11.5px;color:var(--ink-faint);margin-top:2rem
 .track-choice{display:flex;gap:10px;margin-bottom:15px}
 .track-choice label{flex:1;border:1px solid var(--border);border-radius:8px;padding:9px 10px;font-size:12.5px;color:var(--ink-soft);cursor:pointer;text-align:center;transition:all .15s;font-weight:400}
 .track-choice input{display:none}
-.track-choice input:checked + label{border-color:var(--indigo);background:var(--indigo-soft);color:var(--indigo);font-weight:600}
+.track-choice label.picked{border-color:var(--indigo);background:var(--indigo-soft);color:var(--indigo);font-weight:600}
 
 .chip-input-box{display:flex;flex-wrap:wrap;gap:6px;align-items:center;border:1px solid var(--border);border-radius:8px;background:var(--bg);padding:7px 8px}
 .chip-input-box input{flex:1;min-width:100px;border:none;background:none;outline:none;font-size:12.5px;color:var(--ink);padding:3px}
