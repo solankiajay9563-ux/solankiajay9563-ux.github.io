@@ -116,11 +116,11 @@ window.skillData = {
           id: 'sql-joins',
           title: 'Advanced JOINs & Self JOINs',
           level: 'intermediate',
-          desc: 'You likely know INNER/LEFT JOIN. The gaps are SELF JOIN (a table joined to itself), non-equi joins, and understanding when to use each. Commonly tested with org-chart or comparis[...]
+          desc: 'You likely know INNER/LEFT JOIN. The gaps are SELF JOIN (a table joined to itself), non-equi joins, and understanding when to use each. Commonly tested with org-chart or comparis[...]',
           subtopics: ['SELF JOIN', 'Non-equi JOIN', 'CROSS JOIN use cases', 'Multiple table JOINs', 'JOIN vs subquery performance intuition'],
           projects: [
-            { text: '<strong>Manager salary comparison</strong> — Classic: employees table joined to itself. Find employees who earn more than their manager. Teaches self-join pattern completel[...]
-            { text: '<strong>Product pair analysis</strong> — Find all pairs of products bought together in the same order (CROSS JOIN or self-join on order_items). Common in e-commerce analyti[...]
+            { text: '<strong>Manager salary comparison</strong> — Classic: employees table joined to itself. Find employees who earn more than their manager. Teaches self-join pattern completel[...]'},
+            { text: '<strong>Product pair analysis</strong> — Find all pairs of products bought together in the same order (CROSS JOIN or self-join on order_items). Common in e-commerce analyti[...]'}
           ],
           sources: [
             { free: true, category: 'practice', label: 'StrataScratch — real interview questions', url: 'https://www.stratascratch.com' },
@@ -132,10 +132,10 @@ window.skillData = {
           id: 'sql-aggregation',
           title: 'Aggregations & Grouping Patterns',
           level: 'intermediate',
-          desc: 'You know basic GROUP BY. The advanced layer is conditional aggregation (CASE inside SUM), HAVING filters, ROLLUP/CUBE, and multi-level aggregation patterns common in business rep[...]
+          desc: 'You know basic GROUP BY. The advanced layer is conditional aggregation (CASE inside SUM), HAVING filters, ROLLUP/CUBE, and multi-level aggregation patterns common in business rep[...]'
           subtopics: ['Conditional aggregation (SUM CASE WHEN)', 'HAVING vs WHERE', 'ROLLUP / CUBE (bonus)', 'Aggregating after window functions', 'Pivot using aggregation'],
           projects: [
-            { text: "<strong>Call outcome pivot table</strong> — Using your Petpooja data conceptually: count calls per agent split by outcome (answered/missed/transferred) as columns, using SU[...]
+            { text: "<strong>Call outcome pivot table</strong> — Using your Petpooja data conceptually: count calls per agent split by outcome (answered/missed/transferred) as columns, using SU[...]'},
             { text: '<strong>Monthly sales report with subtotals</strong> — Use ROLLUP to get per-category totals AND a grand total in one query. Show this as an "executive summary SQL".' }
           ],
           sources: [
@@ -148,7 +148,7 @@ window.skillData = {
           id: 'sql-subqueries',
           title: 'Subqueries & Correlated Subqueries',
           level: 'intermediate',
-          desc: 'Subqueries inside SELECT, FROM, WHERE, and HAVING. Correlated subqueries reference the outer query — slow but heavily tested in interviews. Understanding when to replace them w[...]
+          desc: 'Subqueries inside SELECT, FROM, WHERE, and HAVING. Correlated subqueries reference the outer query — slow but heavily tested in interviews. Understanding when to replace them w[...]',
           subtopics: ['Scalar subquery in SELECT', 'Correlated subquery in WHERE', 'Exists vs IN vs JOIN', 'Subquery vs CTE decision'],
           projects: [
             { text: '<strong>Find agents above average performance</strong> — Subquery calculates average, outer query filters. Then rewrite the same thing as a CTE and compare.' }
@@ -187,8 +187,8 @@ window.skillData = {
           id: 'py-core',
           title: 'pandas Core — Loading, Cleaning, Shaping',
           level: 'foundation',
-          desc: "The absolute bedrock. 80% of analyst Python work is here. You already use pandas in your pipeline — the goal is going deeper: methodically handling any messy dataset you're han[...]
-          subtopics: ['read_csv / read_excel with options', 'Handling nulls (fillna, dropna, isna)', 'dtype conversion', 'rename / drop / reindex', 'String cleaning (str.strip, str.lower, str.rep[...]
+          desc: "The absolute bedrock. 80% of analyst Python work is here. You already use pandas in your pipeline — the goal is going deeper: methodically handling any messy dataset you're han[...]",
+          subtopics: ['read_csv / read_excel with options', 'Handling nulls (fillna, dropna, isna)', 'dtype conversion', 'rename / drop / reindex', 'String cleaning (str.strip, str.lower, str.rep[...]']
           projects: [
             { text: '<strong>Dirty data cleaning challenge</strong> — Download any messy Kaggle dataset. Document every cleaning step in a Jupyter notebook with before/after value counts.' },
             { text: "<strong>Reframe your Petpooja script</strong> — Extract just the cleaning portion of your pipeline into a standalone notebook. Add markdown cells explaining each step." }
@@ -205,7 +205,7 @@ window.skillData = {
           title: 'groupby, agg, pivot_table',
           level: 'intermediate',
           desc: "The pandas equivalent of SQL's GROUP BY. groupby().agg() lets you apply multiple functions simultaneously. pivot_table reshapes data into summary tables.",
-          subtopics: ['groupby single and multiple columns', 'agg with dict (multiple functions)', 'Named aggregations', 'pivot_table with values/index/columns/aggfunc', 'value_counts and crossta[...]
+          subtopics: ['groupby single and multiple columns', 'agg with dict (multiple functions)', 'Named aggregations', 'pivot_table with values/index/columns/aggfunc', 'value_counts and crossta[...]']
           projects: [
             { text: "<strong>Agent performance summary table</strong> — From call log CSV: groupby agent → agg(calls='count', avg_duration='mean'). Output a ranked summary table." },
             { text: "<strong>Sales pivot by category & region</strong> — Olist dataset. pivot_table(values='revenue', index='product_category', columns='state', aggfunc='sum')." }
@@ -221,9 +221,9 @@ window.skillData = {
           title: 'merge, join, concat',
           level: 'intermediate',
           desc: 'pandas equivalent of SQL JOINs. Analysts constantly combine datasets — orders with customers, calls with agents, products with categories.',
-          subtopics: ['pd.merge — how, on, left_on/right_on', 'merge vs join vs concat', 'Handling duplicate column names after merge', 'Detecting bad merges (many-to-many)', 'pd.concat along a[...]
+          subtopics: ['pd.merge — how, on, left_on/right_on', 'merge vs join vs concat', 'Handling duplicate column names after merge', 'Detecting bad merges (many-to-many)', 'pd.concat along a[...]']
           projects: [
-            { text: '<strong>Enrich call logs with agent metadata</strong> — Merge a call log DataFrame with an agent info DataFrame on agent_id, then find calls where agent is missing (left jo[...]
+            { text: '<strong>Enrich call logs with agent metadata</strong> — Merge a call log DataFrame with an agent info DataFrame on agent_id, then find calls where agent is missing (left jo[...]'},
             { text: '<strong>Combine multiple monthly CSV files</strong> — Read 12 monthly CSVs in a loop, pd.concat them into one DataFrame, then analyse the full year.' }
           ],
           sources: [
@@ -236,8 +236,8 @@ window.skillData = {
           id: 'py-apply',
           title: 'apply, map, lambda, vectorisation',
           level: 'intermediate',
-          desc: 'Transforming column values. apply() runs a function row-by-row or column-by-column. map() replaces values. Vectorised operations (avoid loops) are the professional way — interv[...]
-          subtopics: ['Series.apply() vs DataFrame.apply()', 'map() for value replacement', 'lambda functions in apply', 'np.where for conditional columns', 'Avoiding for loops — vectorised ope[...]
+          desc: 'Transforming column values. apply() runs a function row-by-row or column-by-column. map() replaces values. Vectorised operations (avoid loops) are the professional way — interv[...]',
+          subtopics: ['Series.apply() vs DataFrame.apply()', 'map() for value replacement', 'lambda functions in apply', 'np.where for conditional columns', 'Avoiding for loops — vectorised ope[...]']
           projects: [
             { text: '<strong>Agent name normalisation</strong> — Refactor a cleaning loop into a clean apply/map pattern instead. Show before and after in a notebook.' },
             { text: '<strong>Derived feature engineering</strong> — Create 3 new columns using apply/lambda: a bucketed age group, a revenue tier, and a weekend flag.' }
@@ -269,10 +269,10 @@ window.skillData = {
           id: 'py-eda',
           title: 'Exploratory Data Analysis (EDA) — Full Workflow',
           level: 'advanced',
-          desc: 'EDA is what analysts actually do with data. Shape → nulls → distributions → correlations → outliers → hypothesis → insight. Interviewers ask "walk me through your EDA[...]
-          subtopics: ['df.info(), .describe(), .shape', 'Null heatmaps', 'Correlation matrix + heatmap', 'Outlier detection (IQR, z-score)', 'Distribution plots per feature', 'Forming and testing[...]
+          desc: 'EDA is what analysts actually do with data. Shape → nulls → distributions → correlations → outliers → hypothesis → insight. Interviewers ask "walk me through your EDA[...]',
+          subtopics: ['df.info(), .describe(), .shape', 'Null heatmaps', 'Correlation matrix + heatmap', 'Outlier detection (IQR, z-score)', 'Distribution plots per feature', 'Forming and testing[...'],
           projects: [
-            { text: '<strong>Full EDA on IBM HR Attrition dataset</strong> — Go through every feature, find 5 interesting patterns, write a conclusion section. Publish on Kaggle as a notebook.'[...]
+            { text: '<strong>Full EDA on IBM HR Attrition dataset</strong> — Go through every feature, find 5 interesting patterns, write a conclusion section. Publish on Kaggle as a notebook.'}
             { text: '<strong>IPL match EDA</strong> — Cricsheet.org data. Does toss matter? Best death-over bowlers? Home advantage trends?' }
           ],
           sources: [
@@ -285,10 +285,10 @@ window.skillData = {
           id: 'py-notebooks',
           title: 'Jupyter Notebooks — Professional Presentation',
           level: 'foundation',
-          desc: 'Your code is your presentation layer in data roles. Messy notebooks with no markdown = junior signal. Clean notebooks with headers, insight callouts, and conclusions = analyst si[...]
-          subtopics: ['Markdown cells for context and conclusions', 'Hiding implementation cells (input hiding)', 'Notebook structure: question → data → analysis → insight', 'Exporting to H[...]
+          desc: 'Your code is your presentation layer in data roles. Messy notebooks with no markdown = junior signal. Clean notebooks with headers, insight callouts, and conclusions = analyst si[...]',
+          subtopics: ['Markdown cells for context and conclusions', 'Hiding implementation cells (input hiding)', 'Notebook structure: question → data → analysis → insight', 'Exporting to H[...]'],
           projects: [
-            { text: "<strong>Reformat one existing project as a proper notebook report</strong> — Problem statement, data overview, analysis with markdown narration, key findings, limitations."[...]
+            { text: "<strong>Reformat one existing project as a proper notebook report</strong> — Problem statement, data overview, analysis with markdown narration, key findings, limitations."}
           ],
           sources: [
             { free: true, category: 'video', label: 'Corey Schafer — Jupyter Notebook tips', url: 'https://www.youtube.com/watch?v=HW29067qVWk' },
