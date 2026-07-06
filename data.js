@@ -19,10 +19,7 @@
         name: "Regex",
         ext: ".rgx",
         color: "#9D174D",
-        topics: [{
-      id: "regex-regex-module",
-      title: "Regex Module",
-      level: "intermediate",
+        topics: [{id: "regex-regex-module",title: "Regex Module",level: "intermediate",
       desc: "",
       subtopics: [],
       projects: [
@@ -301,5 +298,29 @@ window.skillData = {
         }
       ]
     }
+    {
+  id: "regex",
+  name: "Regex",
+  ext: ".Rgx",
+  color: "#9D174D",
+  topics: [
+    {
+      id: "regex-regex-module",
+      title: "Regex Module",
+      level: "intermediate",
+      desc: "Pattern Matching, String Matching",
+      subtopics: ["Literal Characters"],
+      projects: [
+        { text: "Pending To add here" }
+      ],
+      sources: [
+        { free: true, category: "practice", label: "Hackerrank", url: "https://www.hackerrank.com/domains/regex?filters%5Bstatus%5D%5B%5D=unsolved" },
+        { free: true, category: "practice", label: "Leetcode - Solve all Regex Problems", url: "https://leetcode.com/studyplan/top-sql-50/" }
+      ],
+      notes: { url: "https://www.remnote.com/w/6a49e95ee028ccd69b806a62/Regex-Gc8gjEQ0gdzsXwXPB", label: "Notes On Regex" },
+      validate: "Solve all problems on the given link"
+    }
+  ]
+}
   ]
 };
