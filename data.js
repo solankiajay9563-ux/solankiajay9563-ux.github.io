@@ -14,6 +14,27 @@
         color: '#0F766E',            accent used for this track's bar/tabs
         topics: [ { ...topic }, ... ]
       },
+      {
+        id: "regex",
+        name: "Regex",
+        ext: ".rgx",
+        color: "#9D174D",
+        topics: [{
+      id: "regex-regex-module",
+      title: "Regex Module",
+      level: "intermediate",
+      desc: "",
+      subtopics: [],
+      projects: [
+    
+      ],
+      sources: [
+        { free: true, category: "practice", label: "Hackerrank", url: "https://www.hackerrank.com/domains/regex?filters%5Bstatus%5D%5B%5D=unsolved" }
+      ],
+      validate: "Try all problems on this topic on HackerRank"
+    }
+  ]
+}
       ...
     ]
   }
