@@ -317,7 +317,6 @@ function copyCodeBlock(){
 function openAddTopicModal(){
   const tracks = window.skillData.tracks;
   document.getElementById('modal-overlay').classList.add('open');
-  document.getElementById('output-box').classList.remove('show');
 
   const trackOptionsHtml = tracks.map(t =>
     `<label><input type="radio" name="track-choice" value="${t.id}" ${t.id===activeTrackId?'checked':''}> ${escapeHtml(t.name)}</label>`
@@ -399,9 +398,13 @@ function openAddTopicModal(){
   document.querySelectorAll('input[name="track-choice"]').forEach(r => {
     r.addEventListener('change', () => {
       document.getElementById('new-track-fields').style.display = r.value === '__new__' && r.checked ? 'block' : 'none';
+      document.querySelectorAll('.track-choice label').forEach(l => l.classList.remove('picked'));
+      r.closest('label').classList.add('picked');
     });
   });
   document.getElementById('tf-tag-input').addEventListener('keydown', handleTagKeydown);
+  const preChecked = document.querySelector('input[name="track-choice"]:checked');
+  if(preChecked) preChecked.closest('label').classList.add('picked');
   addProjectRow();
   addSourceRow();
 }
