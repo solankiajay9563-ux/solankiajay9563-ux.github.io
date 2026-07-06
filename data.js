@@ -92,7 +92,7 @@ window.skillData = {
             { free: true, category: 'practice', label: 'LeetCode — Database Medium problems', url: 'https://leetcode.com/tag/database/' },
             { free: true, category: 'article', label: 'PostgreSQL Tutorial — CTEs', url: 'https://www.postgresqltutorial.com/postgresql-cte/' }
           ],
-          validate: 'Solve LeetCode #185 (Department Top Three Salaries) and #262 (Trips and Users) using CTEs without looking at solutions. If you can write them cleanly in one attempt, you own C[...]
+          validate: 'Solve LeetCode #185 (Department Top Three Salaries) and #262 (Trips and Users) using CTEs without looking at solutions. If you can write them cleanly in one attempt, you own C[...]'
         },
         {
           id: 'sql-window',
@@ -110,7 +110,7 @@ window.skillData = {
             { free: true, category: 'article', label: 'Mode Analytics — Window Functions', url: 'https://mode.com/sql-tutorial/sql-window-functions/' },
             { free: true, category: 'practice', label: 'LeetCode Top SQL 50', url: 'https://leetcode.com/studyplan/top-sql-50/' }
           ],
-          validate: 'Solve LeetCode #184 (Department Highest Salary), #178 (Rank Scores), and #180 (Consecutive Numbers) — all three using window functions. If you solve them unaided, you are i[...]
+          validate: 'Solve LeetCode #184 (Department Highest Salary), #178 (Rank Scores), and #180 (Consecutive Numbers) — all three using window functions. If you solve them unaided, you are i[...]'
         },
         {
           id: 'sql-joins',
@@ -142,7 +142,7 @@ window.skillData = {
             { free: true, category: 'article', label: 'Mode Analytics — Aggregations', url: 'https://mode.com/sql-tutorial/sql-aggregate-functions/' },
             { free: true, category: 'practice', label: 'HackerRank — Advanced Aggregation', url: 'https://www.hackerrank.com/domains/sql' }
           ],
-          validate: 'Write one query that produces a pivot-style report (outcomes as columns) from any dataset using only CASE WHEN inside SUM. If it runs correctly first try, this topic is close[...]
+          validate: 'Write one query that produces a pivot-style report (outcomes as columns) from any dataset using only CASE WHEN inside SUM. If it runs correctly first try, this topic is close[...]'
         },
         {
           id: 'sql-subqueries',
