@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Skill Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+
+  <div class="masthead">
+    <div class="eyebrow">personal curriculum · upskilling ledger</div>
+    <h1>Data Skill <span>Ledger</span></h1>
+    <div class="query-console">
+      <div class="query-line">
+        <span class="prompt">›</span>
+        <span class="txt">SELECT * FROM skills WHERE confirmed = true;</span>
+        <span class="cursor"></span>
+      </div>
+      <div class="query-result">
+        → <b id="g-count">0</b> of <b id="g-total">0</b> rows returned
+        <span class="pct-pill" id="g-pct">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="top-actions">
+    <div class="tabs" id="tabs"></div>
+    <button class="btn-primary" onclick="openAddTopicModal()">+ Add topic</button>
+  </div>
+
+  <div id="panels"></div>
+
+  <footer>progress saves automatically in this browser · new topics save live to Supabase</footer>
+</div>
+
+<!-- ADD TOPIC MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>Add a topic</h2>
+      <button class="modal-close" onclick="closeAddTopicModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-footer">
+      <button class="btn-secondary" onclick="closeAddTopicModal()">Cancel</button>
+      <button class="btn-primary" id="save-topic-btn" onclick="saveTopic()">Save topic</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
