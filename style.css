@@ -61,6 +61,8 @@ h1 span{color:var(--teal)}
 .btn-primary:hover{background:#000}
 .btn-secondary{font-family:var(--mono);font-size:12px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:7px 12px;cursor:pointer;color:var(--ink-soft);transition:all .15s}
 .btn-secondary:hover{border-color:var(--ink);color:var(--ink)}
+.auth-bar{display:flex;align-items:center;gap:8px}
+.auth-status{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft)}
 
 .panel{display:none;background:var(--card);border:1px solid var(--border);border-radius:0 var(--radius) var(--radius) var(--radius);padding:1.25rem}
 .panel.active{display:block}
