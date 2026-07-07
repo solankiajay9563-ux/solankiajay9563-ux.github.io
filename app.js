@@ -9,7 +9,48 @@
 const TRACK_PALETTE = ['#0F766E', '#4338CA', '#9D174D', '#B45309', '#0369A1', '#15803D'];
 let activeTrackId = null;
 let supabaseClient = null;
+let currentUser = null;
 const appData = { tracks: [] };
+
+/* ---------- auth ---------- */
+async function checkAuth(){
+  const { data: { session } } = await supabaseClient.auth.getSession();
+  currentUser = session ? session.user : null;
+  renderAuthBar();
+}
+
+function renderAuthBar(){
+  const bar = document.getElementById('auth-bar');
+  const addBtn = document.getElementById('add-topic-btn');
+  if(currentUser){
+    addBtn.style.display = 'inline-flex';
+    bar.innerHTML = `<span class="auth-status">🔓 ${escapeHtml(currentUser.email)}</span> <button class="btn-secondary" onclick="doLogout()">Log out</button>`;
+  } else {
+    addBtn.style.display = 'none';
+    bar.innerHTML = `<button class="btn-secondary" onclick="openLoginPrompt()">🔒 Log in to edit</button>`;
+  }
+}
+
+function openLoginPrompt(){
+  const email = prompt('Email:');
+  if(!email) return;
+  const password = prompt('Password:');
+  if(!password) return;
+  doLogin(email, password);
+}
+
+async function doLogin(email, password){
+  const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+  if(error){ alert('Login failed: ' + error.message); return; }
+  currentUser = data.user;
+  renderAuthBar();
+}
+
+async function doLogout(){
+  await supabaseClient.auth.signOut();
+  currentUser = null;
+  renderAuthBar();
+}
 
 /* ---------- Supabase wiring ---------- */
 function configReady(){
@@ -574,6 +615,8 @@ async function init(){
 
   supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   panels.innerHTML = `<div class="panel active"><div class="no-tracks">Loading your topics from Supabase…</div></div>`;
+
+  await checkAuth();
 
   try {
     await loadData();
